@@ -1,0 +1,177 @@
+body {
+    margin: 0;              /* Tüm dış boşlukları kaldır */
+    padding: 0;             /* İç boşlukları da kaldır */
+    background-color: #121212b0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #000;
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: #444242; /* logodaki sarı */
+    padding: 12px 0; /* sağ-sol padding'i kaldırdık */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #9e9e9e;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%; /* tam genişlik */
+}
+
+header img {
+    height: 55px;
+    width: auto;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: 15px;
+}
+
+.grid a {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.1); /* sarımsı gölge */
+}
+
+.grid a.large {
+    grid-column: span 2;
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.grid a:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0%), #ffcc0038)
+}
+
+.label {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px black;
+    z-index: 2;
+}
+
+.breadcrumb {
+    background-color: #121212;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #222;
+}
+
+
+footer {
+    background-color: #9f989826;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.footer-grid {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-left, .footer-right {
+    flex: 1 1 200px;
+}
+
+.footer-left h4, .footer-right h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.footer-left p, .footer-left a, .footer-right a {
+    font-size: 0.95rem;
+    color: #eee;
+    text-decoration: none;
+}
+
+.footer-left i, .footer-right i {
+    margin-right: 8px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 1.4rem;
+    color: #ffcc00;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 220px;
+   /* border-radius: 10px;*/
+    margin-bottom: 20px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    /*border-radius: 10px;*/
+}
+
+
